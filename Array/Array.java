@@ -1,15 +1,15 @@
-public class ArrayImplement{
+public class Array{
     private int[] data;
     private int size;
 
     // 构造函数，传入数组的容量capacity构造array
-    public ArrayImplement(int capacity){
+    public Array(int capacity){
         data = new int [capacity];
         size = 0;
     }
 
     //无参数的构造函数，默认数组的容量capacity=10
-    public Array(){
+    public Array() {
         this(10);
     }
 
