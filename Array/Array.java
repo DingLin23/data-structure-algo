@@ -55,4 +55,17 @@ public class Array{
         data[index] = e;
         size++;
     }
+
+    @Override //覆盖父类的一个方法，因为当如果我们toString打错的时候会提示
+    public String toString(){
+        StringBuilder res = new StringBuilder();
+        res.append(String.format("Array: size = %d, capacity = %d\n", size,data.length));//%d和%f分别用来表示输出时，替换整型输出和浮点型输出的占位符.\n是回车字符
+        res.append('[');
+        for(int i = 0; i < size; i++){
+            res.append(data[i]);
+            if(i != size-1) res.append(", ");
+        }
+        res.append(']');
+        return res.toString();
+    }
 }
