@@ -49,7 +49,7 @@ public class ArrayImplement{
         // for(int j = size; j >=index; j--){
         //     data[j] = data[j--];
         // }
-        for(int i = size -1; j>= index; j--){
+        for(int i = size -1; i>= index; i--){
             data[i+1] = data[i];
         }
         data[index] = e;
