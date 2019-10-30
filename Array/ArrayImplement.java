@@ -27,4 +27,32 @@ public class ArrayImplement{
     public boolean isEmpty(){
         return size == 0;
     }
+
+    //向所有元素后添加一个新元素
+    public void addLast(int e){
+
+        if(size == data.length){
+            throw new IllegalArgumentException("AddLast fail, array is full");
+        }
+        data[size] = e; // or data[size++] = e;
+        size++;
+        
+    }
+    
+    //在第index位置插入一个元素
+    public void add(int index, int e){
+        if(size == data.length){
+            throw new IllegalArgumentException("AddLast fail, array is full");
+        }
+        if(index < 0 || index > size)  
+            throw new IllegalArgumentException("Add fail, require index >= 0 and index <= size");
+        // for(int j = size; j >=index; j--){
+        //     data[j] = data[j--];
+        // }
+        for(int i = size -1; j>= index; j--){
+            data[i+1] = data[i];
+        }
+        data[index] = e;
+        size++;
+    }
 }
