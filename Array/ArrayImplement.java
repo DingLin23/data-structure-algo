@@ -30,13 +30,13 @@ public class ArrayImplement{
 
     //向所有元素后添加一个新元素
     public void addLast(int e){
-
-        if(size == data.length){
-            throw new IllegalArgumentException("AddLast fail, array is full");
-        }
-        data[size] = e; // or data[size++] = e;
-        size++;
+        add(size,e);
         
+    }
+
+    //向所有数组元素前添加一个新元素
+    public void addFirst(int e){
+        add(0,e);
     }
     
     //在第index位置插入一个元素
